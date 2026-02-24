@@ -1,3 +1,3 @@
 Análise de indicadores do consumidor.gov
 
-!(images/repository-open-graph.png)
+<img src="images/repository-open-graph.png" width="200">
