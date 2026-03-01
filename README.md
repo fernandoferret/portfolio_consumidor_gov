@@ -61,10 +61,27 @@ Essa abordagem reflete práticas utilizadas em ambientes analíticos reais, com 
 <h2>Decisões Técnicas</h2>
 
 <ul>
-<li>Uso de DuckDB para processamento analítico local eficiente</li>
-<li>Persistência em Parquet para otimização de leitura e compressão</li>
-<li>Separação do pipeline em notebooks independentes</li>
-<li>Anonimização de entidades sensíveis por boas práticas éticas</li>
+
+<li>
+<b>Uso de DuckDB como motor analítico:</b> escolhido por sua capacidade de executar queries SQL analíticas diretamente sobre arquivos Parquet, eliminando a necessidade de banco relacional dedicado e permitindo alta performance em ambiente local.
+</li>
+
+<li>
+<b>Persistência em formato Parquet:</b> adotado por sua compressão eficiente e leitura columnar, reduzindo uso de memória e melhorando desempenho em operações analíticas.
+</li>
+
+<li>
+<b>Separação do pipeline em múltiplos notebooks:</b> estruturado em etapas independentes (exploração, tratamento, agregação e análise) para melhorar organização, reprodutibilidade e manutenibilidade.
+</li>
+
+<li>
+<b>Uso combinado de SQL e Python:</b> SQL utilizado para agregações e métricas analíticas, enquanto Python foi utilizado para exploração, manipulação e visualização, seguindo práticas comuns em ambientes de análise de dados.
+</li>
+
+<li>
+<b>Anonimização de entidades sensíveis:</b> nomes de empresas foram removidos deliberadamente para evitar exposição indevida e manter o foco na análise metodológica e nos padrões estruturais dos dados.
+</li>
+
 </ul>
 
 <hr>
