@@ -53,6 +53,10 @@ O pipeline foi estruturado em camadas independentes:
 </ul>
 
 <p>
+<img src="images/diagrama_arquitetura.png" >
+</p>
+
+<p>
 Essa abordagem reflete práticas utilizadas em ambientes analíticos reais, com separação clara entre transformação, agregação e interpretação.
 </p>
 
