@@ -187,6 +187,41 @@ Isso pode indicar necessidade de melhoria na comunicação com o consumidor ou m
 
 <hr>
 
+<h2>Como Reproduzir</h2>
+
+<p>
+Para reproduzir a análise, siga os passos abaixo:
+</p>
+
+<ol>
+<li>Clone este repositório:</li>
+</ol>
+
+<pre>
+git clone https://github.com/fernandoferret/portfolio_consumidor_gov.git
+</pre>
+
+<ol start="2">
+<li>Certique-se que os dados brutos (csv) estejam descompactados na pasta correta do Google Drive a partir do zip: basecompleta2025-12.zip</li>
+</ol>
+
+<ol start="3">
+<li>Abra o ambiente no Google Colab e execute os notebooks na seguinte ordem:</li>
+</ol>
+
+<pre>
+notebooks/01_exploracao.ipynb
+notebooks/02_tratamento.ipynb
+notebooks/03_analise_sql.ipynb
+notebooks/04_insights.ipynb
+</pre>
+
+<p>
+Os dados intermediários são persistidos em formato Parquet e utilizados nas etapas seguintes.
+</p>
+
+<hr>
+
 <h2>Estrutura do Projeto</h2>
 
 <pre>
