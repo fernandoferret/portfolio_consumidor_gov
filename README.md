@@ -58,6 +58,17 @@ Essa abordagem reflete práticas utilizadas em ambientes analíticos reais, com 
 
 <hr>
 
+<h2>Decisões Técnicas</h2>
+
+<ul>
+<li>Uso de DuckDB para processamento analítico local eficiente</li>
+<li>Persistência em Parquet para otimização de leitura e compressão</li>
+<li>Separação do pipeline em notebooks independentes</li>
+<li>Anonimização de entidades sensíveis por boas práticas éticas</li>
+</ul>
+
+<hr>
+
 <h2>Pipeline de Dados</h2>
 
 <ul>
