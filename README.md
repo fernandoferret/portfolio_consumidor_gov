@@ -87,6 +87,39 @@ A coluna de identificação das empresas foi removida deliberadamente para:
 
 <hr>
 
+<h2>Exemplo de Query SQL</h2>
+
+<p>
+Exemplo de cálculo do índice de solução por segmento, utilizado para avaliação comparativa de desempenho entre setores do mercado.
+</p>
+
+<pre><code class="language-sql">
+SELECT
+    "Segmento de Mercado",
+    SUM(CASE WHEN "Situação" = 'Finalizada avaliada' AND "Avaliação Reclamação" = 'Resolvida' THEN 1 ELSE 0 END) AS "Reclamações Resolvidas",
+    SUM(CASE WHEN "Situação" = 'Finalizada não avaliada' THEN 1 ELSE 0 END) AS "Reclamações Não Avaliadas",
+    SUM(CASE WHEN "Situação" IN ('Finalizada avaliada', 'Finalizada não avaliada') THEN 1 ELSE 0 END) AS "Total Finalizadas",
+    CAST(
+        SUM(CASE WHEN "Situação" = 'Finalizada avaliada' AND "Avaliação Reclamação" = 'Resolvida' THEN 1 ELSE 0 END) +
+        SUM(CASE WHEN "Situação" = 'Finalizada não avaliada' THEN 1 ELSE 0 END)
+    AS DOUBLE) *
+    100.0 /
+    NULLIF(SUM(CASE WHEN "Situação" IN ('Finalizada avaliada', 'Finalizada não avaliada') THEN 1 ELSE 0 END), 0)
+    AS "Índice de Solução"
+FROM
+    base_completa_2025_12
+GROUP BY
+    "Segmento de Mercado"
+ORDER BY
+    "Índice de Solução" DESC
+</code></pre>
+
+<p>
+Esta query foi executada em DuckDB sobre arquivos Parquet, para calcular indicadores de desempenho e ranking competitivo entre segmentos de mercado.
+</p>
+
+<hr>
+
 <h2>Indicadores Desenvolvidos</h2>
 
 <ul>
