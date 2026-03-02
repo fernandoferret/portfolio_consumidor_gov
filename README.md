@@ -275,10 +275,10 @@ git clone https://github.com/fernandoferret/portfolio_consumidor_gov.git
 </ol>
 
 <pre>
-notebooks/01_exploracao.ipynb
-notebooks/02_tratamento.ipynb
-notebooks/03_analise_sql.ipynb
-notebooks/04_insights.ipynb
+notebooks/01_consumidor_exploracao.ipynb
+notebooks/02_consumidor_tratamento.ipynb
+notebooks/03_consumidor_analise.ipynb
+notebooks/04_consumidor_insights.ipynb
 </pre>
 
 <p>
@@ -329,5 +329,13 @@ Este projeto foi desenvolvido como parte de um portfólio profissional, com o ob
 <li>Capacidade de transformar dados em insights acionáveis</li>
 <li>Aplicação de boas práticas de arquitetura analítica</li>
 </ul>
+
+<hr>
+
+<h2>Fontes</h2>
+
+<p>
+Ministério da Justiça: https://dados.mj.gov.br/dataset/reclamacoes-do-consumidor-gov-br
+</p>
 
 <hr>
